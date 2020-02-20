@@ -1,0 +1,17 @@
+@mixin fx($type: space-between){
+	display: flex;
+	justify-content: $type;
+	align-items: center;
+}
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin fullFix() {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}

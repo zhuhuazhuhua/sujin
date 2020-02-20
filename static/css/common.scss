@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+.banner {
+  width: 100%;
+  height: 800px;
+  cursor: default;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  outline: none;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  // background-size: 100% auto;
+}
+.banner_index {
+  background-image: url("../../static/images/banner_index.png");
+}
+.banner_baas {
+  background-image: url("../../static/images/banner_baas.png");
+}
+.banner_about {
+  // height: 570px;
+  background-image: url("../../static/images/banner_about.png");
+}
+.banner_traceability {
+  background-image: url("../../static/images/banner_traceability.png");
+}
+.banner_certificate {
+  background-image: url("../../static/images/banner_certificate.png");
+}
+.banner_solution {
+  background-image: url("../../static/images/banner_solution.png");
+}
+//banner文字样式
+.banner_content {
+  color: #fff;
+  text-align: left;
+  width: 1200px;
+  margin: 200px auto 0;
+  .banner_title {
+    font-size: 48px;
+    width: 300px;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+  .banner_text {
+    font-size: 16px;
+    width: 465px;
+    line-height: 1.6;
+    margin-top: 70px;
+  }
+  .banner_text_big {
+    font-size: 20px;
+    width: 540px;
+    line-height: 1.6;
+    margin-top: 70px;
+  }
+}
+//内容标题通用样式
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  overflow: hidden;
+  .content_title {
+    margin-bottom: 40px;
+    .content_big_title {
+      font-size: 36px;
+    }
+    .content_small_title {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+}
+//关于我们公共css
+.plat_5 {
+  height: 605px;
+  .platformBg {
+    @include fullFix();
+    background: url("../../static/images/about_bg.png") no-repeat bottom,
+      transparent;
+    background-size: auto;
+  }
+}
+.plat_6 {
+  height: 769px;
+  .platformBg {
+    @include fullFix();
+    background: url("../../static/images/traceability_advance_bg.png") no-repeat bottom,
+      transparent;
+    background-size: auto;
+  }
+}
+.contact_plat {
+  height: 277px;
+  .platformBg {
+    @include fullFix();
+    background: url("../../static/images/solution_contact_bg.png") no-repeat
+        bottom,
+      transparent;
+    background-size: auto;
+  }
+}
+.platform {
+  position: relative;
+  .out {
+    @include fullFix();
+    z-index: 9;
+    // width: 1200px;
+    margin: 20px auto 0;
+    .index_content {
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      overflow-x: hidden;
+      height: 100%;
+    }
+    .title {
+      padding: 25px 0;
+      p {
+        margin: 0;
+      }
+      .big_title {
+        font-size: 36px;
+        padding-top: 0px;
+        font-weight: normal;
+        font-family: "微软雅黑";
+        color: rgb(33, 33, 33);
+        margin: 15px auto;
+      }
+      .small_title {
+        @include fx(center);
+        .subline {
+          width: 50px;
+          height: 1px;
+          background-color: #808080;
+        }
+        .small_text {
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: normal;
+          font-family: "微软雅黑";
+          padding: 0 15px;
+          color: rgba(153, 153, 153, 1);
+        }
+      }
+    }
+    .about_us_text {
+      width: 865px;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+    .sj_second_cont {
+      margin-top: 40px;
+    }
+  }
+}
+
+//鼠标悬停css3特效
+.hover {
+  position: relative;
+  .img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    opacity: 1;
+    transition: all 0.33s;
+  }
+  .hover_img {
+    transition: all 0.33s;
+    opacity: 0;
+    width: 100%;
+  }
+  &:hover {
+    .img {
+      opacity: 0;
+      transition: all 0.33s;
+    }
+    .hover_img {
+      opacity: 1;
+      transition: all 0.33s;
+    }
+  }
+}
